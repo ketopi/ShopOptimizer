@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+
+@theme {
+    --font-poppins: "Poppins", sans-serif;
+}
+
+body {
+    @apply bg-white text-slate-800 text-sm font-poppins antialiased;
+}
+
+button {
+    @apply cursor-pointer;
+}
+
+
+/* Animación shimmer para botones */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
+
+/* Animación de entrada para elementos del menú móvil */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efecto de pulso para indicador activo */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Scroll suave para toda la página */
+html {
+    scroll-behavior: smooth;
+}
