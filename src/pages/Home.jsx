@@ -4,11 +4,6 @@ import TestimonialsSection from "./seccions/TestimonialsSection";
 import PricingSection from "./seccions/PricingSection";
 import FAQSection from "./seccions/FAQSeccion";
 
-
-
-
-
-
 export default function Home() {
     return (
         <>
